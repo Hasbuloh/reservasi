@@ -28,11 +28,18 @@
             <label for="varchar">No Blok <?php echo form_error('no_blok') ?></label>
             <input type="text" class="form-control" name="no_blok" id="no_blok" placeholder="No Blok" value="<?php echo $no_blok; ?>" />
         </div>
+        <div class="form-group">
+            <label for="varchar">Harga Kamar <?php echo form_error('harga') ?></label>
+            <input type="number" class="form-control" name="harga" id="harga" placeholder="Harga Kamar" value="<?php echo $harga; ?>" required=""/>
+        </div>
+        <div class="form-group">
+			<label for="">Keyword <?php echo form_error('keyword')?></label>
+			<textarea class="form-control" name="keyword" id="keyword" placeholder="Keyword" value="<?php echo $keyword ?>" required=""></textarea>
+        </div>
 	    <input type="hidden" name="ID" value="<?php echo $ID; ?>" /> 
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
 	    <a href="<?php echo site_url('admin/tbm_kamar') ?>" class="btn btn-default">Cancel</a>
 	</form>
     </div>
   </div>
-
 </section>

@@ -35,11 +35,14 @@ class Tbm_kamar extends CI_Controller
 		'ID' => $row->ID,
 		'no_kamar' => $row->no_kamar,
 		'no_blok' => $row->no_blok,
+        'harga' => $row->harga,
+        'keyword' => $row->keyword,
+        'page' => 'admin/pages/tbm_kamar/tbm_kamar_read'
 	    );
-            $this->load->view('tbm_kamar/tbm_kamar_read', $data);
+            $this->load->view('admin/index', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
-            redirect(site_url('tbm_kamar'));
+            redirect(site_url('admin/tbm_kamar'));
         }
     }
 
@@ -51,6 +54,8 @@ class Tbm_kamar extends CI_Controller
             'ID' => set_value('ID'),
             'no_kamar' => set_value('no_kamar'),
             'no_blok' => set_value('no_blok'),
+            'harga' => set_value('harga'),
+            'keyword' => set_value('keyword'),
             'page' => 'admin/pages/tbm_kamar/tbm_kamar_form'
 	);
         
@@ -86,6 +91,8 @@ class Tbm_kamar extends CI_Controller
 		'ID' => set_value('ID', $row->ID),
 		'no_kamar' => set_value('no_kamar', $row->no_kamar),
         'no_blok' => set_value('no_blok', $row->no_blok),
+        'harga' => set_value('harga', $row->harga),
+        'keyword' => set_value('keyword', $row->keyword),
         'page' => 'admin/pages/tbm_kamar/tbm_kamar_form'
 	    );
             $this->load->view('admin/index', $data);
