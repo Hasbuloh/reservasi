@@ -19,6 +19,8 @@
         <table class="table">
 	    <tr><td>No Kamar</td><td><?php echo $no_kamar; ?></td></tr>
 	    <tr><td>No Blok</td><td><?php echo $no_blok; ?></td></tr>
+	    <tr><td>Harga</td><td><?php echo $harga; ?></td></tr>
+	    <tr><td>Keyword</td><td><?php echo $keyword; ?></td></tr>
 	    <tr><td></td><td><a href="<?php echo site_url('admin/tbm_kamar') ?>" class="btn btn-default">Cancel</a></td></tr>
 	</table>
 </div>

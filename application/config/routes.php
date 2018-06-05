@@ -54,12 +54,22 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 # User Page Route
+$route['home'] = 'public/C_Dashboard';
+$route['kamar'] = 'public/C_Kamar';
+$route['kamar/detail/(:any)'] = 'public/C_Kamar/read/$1';
+$route['kamar/(:num)'] = 'public/C_Kamar/read/$1';
+$route['kamar/search'] = 'public/C_Kamar/search';
+$route['reservasi/sukses'] = 'public/C_Reservasi/add_success';
+
+$route['cek'] = 'public/C_Reservasi';
+$route['add/(:any)'] = 'public/C_Reservasi/add/$1';
+
 # Login
 $route['admin'] = 'admin/C_User';
 $route['admin/auth'] = 'admin/C_User/login';
 # Dashboard
 $route['admin/dashboard'] = 'admin/C_Dashboard';
-# Kamar
-$route['admin/kamar'] = 'admin/C_Kamar';
-$route['admin/kamar/(:any)'] = 'admin/C_Kamar';
+# Kamarqq
+$route['admin/kamar'] = 'admin/Tbm_kamar';
+$route['admin/kamar/update/(:num)'] = 'admin/Tbm_kamar/update/$1';
 # Admin Page Route
